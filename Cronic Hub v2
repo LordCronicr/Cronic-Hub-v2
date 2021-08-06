@@ -1,0 +1,189 @@
+--Made By LordCronicr
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local MM2 = Instance.new("TextButton")
+local Headless = Instance.new("TextButton")
+local Fly = Instance.new("TextButton")
+local Noclip = Instance.new("TextButton")
+local RevisAdmin = Instance.new("TextButton")
+local Sharkbite = Instance.new("TextButton")
+local Jailbreak = Instance.new("TextButton")
+local BadBusiness = Instance.new("TextButton")
+local label = Instance.new("TextLabel")
+local Speed100 = Instance.new("TextButton")
+local SpeedDefault = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(126, 126, 126)
+main.Position = UDim2.new(0.763285041, 0, 0.372641504, 0)
+main.Size = UDim2.new(0, 262, 0, 523)
+main.Active = true
+main.Draggable = true
+
+MM2.Name = "MM2"
+MM2.Parent = main
+MM2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MM2.Position = UDim2.new(0.606870234, 0, 0.115546219, 0)
+MM2.Size = UDim2.new(0, 103, 0, 62)
+MM2.Font = Enum.Font.SourceSans
+MM2.Text = "MM2 GUI"
+MM2.TextColor3 = Color3.fromRGB(0, 0, 0)
+MM2.TextSize = 14.000
+MM2.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Ethanoj1/EclipseMM2/master/Script", true))()
+end)
+
+
+Headless.Name = "Headless"
+Headless.Parent = main
+Headless.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Headless.Position = UDim2.new(0.603053451, 0, 0.309554696, 0)
+Headless.Size = UDim2.new(0, 103, 0, 62)
+Headless.Font = Enum.Font.SourceSans
+Headless.Text = "Headless"
+Headless.TextColor3 = Color3.fromRGB(0, 0, 0)
+Headless.TextSize = 14.000
+Headless.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/LordCronicr/Headless/main/Headless",true))();
+
+end)
+Fly.Name = "Fly"
+Fly.Parent = main
+Fly.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Fly.Position = UDim2.new(0.603053451, 0, 0.721861601, 0)
+Fly.Size = UDim2.new(0, 103, 0, 62)
+Fly.Font = Enum.Font.SourceSans
+Fly.Text = "Fly"
+Fly.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fly.TextSize = 14.000
+Fly.MouseButton1Down:connect(function()
+	Fly.MouseButton1Down:connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/LordCronicr/Fly/main/Fly",true))();  end)
+	end)
+Noclip.Name = "Noclip"
+Noclip.Parent = main
+Noclip.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Noclip.Position = UDim2.new(0, 0, 0.72186166, 0)
+Noclip.Size = UDim2.new(0, 103, 0, 62)
+Noclip.Font = Enum.Font.SourceSans
+Noclip.Text = "Noclip"
+Noclip.TextColor3 = Color3.fromRGB(0, 0, 0)
+Noclip.TextSize = 14.000
+Noclip.MouseButton1Down:connect(function()
+	noclip = false
+	game:GetService('RunService').Stepped:connect(function()
+		if noclip then
+			game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+		end
+	end)
+	plr = game.Players.LocalPlayer
+	mouse = plr:GetMouse()
+	mouse.KeyDown:connect(function(key)
+		if key == "e" then
+			noclip = not noclip
+			game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+		end
+	end)
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "Noclip By LordCronicr";
+		Text = "Loaded.";
+		Duration = "10";
+	})
+	wait(1)
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "Noclip";
+		Text = "Press E To Noclip";
+		Duration = "10";
+	})
+end)
+RevisAdmin.Name = "Revis Admin"
+RevisAdmin.Parent = main
+RevisAdmin.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RevisAdmin.Position = UDim2.new(0.603053451, 0, 0.518481791, 0)
+RevisAdmin.Size = UDim2.new(0, 103, 0, 62)
+RevisAdmin.Font = Enum.Font.SourceSans
+RevisAdmin.Text = "Revis Admin"
+RevisAdmin.TextColor3 = Color3.fromRGB(0, 0, 0)
+RevisAdmin.TextSize = 14.000
+RevisAdmin.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(('https://pastebin.com/raw/pyzjWNhk'),true))()
+
+end)
+Sharkbite.Name = "Sharkbite"
+Sharkbite.Parent = main
+Sharkbite.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sharkbite.Position = UDim2.new(0, 0, 0.115546219, 0)
+Sharkbite.Size = UDim2.new(0, 103, 0, 62)
+Sharkbite.Font = Enum.Font.SourceSans
+Sharkbite.Text = "Sharkbite GUI"
+Sharkbite.TextColor3 = Color3.fromRGB(0, 0, 0)
+Sharkbite.TextSize = 14.000
+Sharkbite.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/YYVLbzVg", true))()
+end) 
+Jailbreak.Name = "Jailbreak"
+Jailbreak.Parent = main
+Jailbreak.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Jailbreak.Position = UDim2.new(0, 0, 0.311466634, 0)
+Jailbreak.Size = UDim2.new(0, 103, 0, 62)
+Jailbreak.Font = Enum.Font.SourceSans
+Jailbreak.Text = "Jaibreak GUI"
+Jailbreak.TextColor3 = Color3.fromRGB(0, 0, 0)
+Jailbreak.TextSize = 14.000
+Jailbreak.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://bloxhub.xyz/script/loader"))()
+end)
+BadBusiness.Name = "Bad Business"
+BadBusiness.Parent = main
+BadBusiness.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BadBusiness.Position = UDim2.new(0, 0, 0.518481791, 0)
+BadBusiness.Size = UDim2.new(0, 103, 0, 62)
+BadBusiness.Font = Enum.Font.SourceSans
+BadBusiness.Text = "Bad Buisness GUI"
+BadBusiness.TextColor3 = Color3.fromRGB(0, 0, 0)
+BadBusiness.TextSize = 14.000
+BadBusiness.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Project-Evolution/Main/main/Loader.lua", true))()
+end)
+label.Name = "label"
+label.Parent = main
+label.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+label.Position = UDim2.new(-7.37309456e-05, 0, -0.00130808353, 0)
+label.Size = UDim2.new(0, 262, 0, 50)
+label.Font = Enum.Font.SourceSans
+label.Text = "Cronic Hub v2 | By: LordCronicr"
+label.TextColor3 = Color3.fromRGB(255, 255, 255)
+label.TextSize = 18.000
+
+Speed100.Name = "Speed 100"
+Speed100.Parent = main
+Speed100.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Speed100.Position = UDim2.new(0.606796622, 0, 0.904397666, 0)
+Speed100.Size = UDim2.new(0, 103, 0, 50)
+Speed100.Font = Enum.Font.SourceSans
+Speed100.Text = "Speed 100"
+Speed100.TextColor3 = Color3.fromRGB(0, 0, 0)
+Speed100.TextSize = 14.000
+Speed100.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+end)
+SpeedDefault.Name = "Speed Default"
+SpeedDefault.Parent = main
+SpeedDefault.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SpeedDefault.Position = UDim2.new(0, 0, 0.904397726, 0)
+SpeedDefault.Size = UDim2.new(0, 103, 0, 50)
+SpeedDefault.Font = Enum.Font.SourceSans
+SpeedDefault.Text = "Speed Default"
+SpeedDefault.TextColor3 = Color3.fromRGB(0, 0, 0)
+SpeedDefault.TextSize = 14.000
+SpeedDefault.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+end)
